@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgb(178, 207, 194), rgb(149, 238, 216));
+    background-color:  #e8faf3;
 
     background-size: cover;
 
@@ -27,11 +27,14 @@ h1 {
     /* margin-right: 690px; */
     margin-bottom: 10px;
     width: 1000px;
-
+background-color: #82d6b9;
     text-align: center;
-    box-shadow: 5px 5px 29px 35px #baffe4;
+    /* box-shadow: 5px 5px 29px 35px #baffe4; */
     padding-bottom: 60px;
     border-radius: 20px;
+    border-style: solid;
+    border-color: #04AA6D;
+   
 }
 
 input {
@@ -47,7 +50,7 @@ input {
 }
 
 p {
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: 28px;
     font-family: sans-serif;
     color: white;
