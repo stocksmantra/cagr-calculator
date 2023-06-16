@@ -1,91 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAGR Calculatorss</title>
-    <link rel="stylesheet" href="./index.css">
+    <title>CAGR Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1 style="text-align: center;">CAGR Calculator</h1>
-    <!-- <img src="./conpic.jpg"> -->
+
     <div class="container">
-      
-       <p><u>Initial Investment</u></p>
-        <input type="range" min="1000" max="10000000" value="1000" name="Initial Investment" id="Initial">
-    <p>value: <span id="output_1"></span>
-      
 
+        <h1>CAGR Calculator</h1>
+        <h4>(Calculate Compound Annual Growth Rate Online)</h4><br>
+        <label for="initialInvestment">Initial Investment (Starting value):</label>
+        <input type="number" id="initialInvestment" required>
+        <br><br><br>
+        <label for="finalInvestment">Final Investment (Ending value):</label>
+        <input type="number" id="finalInvestment" required>
+        <br><br><br>
+        <label for="investmentDuration">Investment Duration (Years/Months):</label>
+        <input type="number" id="investmentDuration" required>
+        <br><br><br>
 
-
-        <p> <u>Final Investment</u></p>
-            <input type="range" min="1000" max="10000000" value="1000" name="Final Investment" id="Final">
-            <p>value: <span id="output_2"></span> </p>
-     
-        <p><u> Duration of Investment</u></p>
-          <input type="range" min="1" max="100" value="5" name="Duration of Investment" id="Duration">
-          <p>Years: <span id="output_3"></span></p> 
-
-
-        <button onclick="answer()">Calculate</button>
-        
-       
-        <p>CAGR %: <span id="outputt"></span></p>
-      
+        <div class="button-71">
+            <button onclick="calculateCAGR()">Calculate CAGR</button>
+        </div>
+        <br>
+        <div id="result"></div><br>
     </div>
+<script src="main.js"></script>
 </body>
-
-<script>
-    function answer() {
-
-
-        var a = parseInt(document.getElementById("Initial").value);
-        var b = parseInt(document.getElementById("Final").value);
-        var c = parseInt(document.getElementById("Duration").value);
-
-        var CAGR = (Math.pow((b / a), (1 / c)) - 1) * 100;
-        document.getElementById("outputt").innerHTML = CAGR;
-    }
-// =============================================
-var slider = document.getElementById("Initial");
-    var output = document.getElementById("output_1");
-    output.innerHTML = slider.value;
-    
-    slider.oninput = function() {
-      output.innerHTML = this.value;
-    }
-    // ========================================== 
-
-    var slider1 = document.getElementById("Final");
-    var output1 = document.getElementById("output_2");
-    output1.innerHTML = slider1.value;
-    
-    slider1.oninput = function() {
-      output1.innerHTML = this.value;
-    }
-    // ========================================== 
-    
-    var slider2 = document.getElementById("Duration");
-    var output2 = document.getElementById("output_3");
-    output2.innerHTML = slider2.value;
-    
-    slider2.oninput = function() {
-      output2.innerHTML = this.value;
-    }
-    // ========================================== 
-</script>
-
-
-
-
-
-
-
-
-
-
 
 </html>
